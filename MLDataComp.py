@@ -12,6 +12,7 @@ summary = data.describe()
 data.isnull().sum()
 data.Age[data.Exited == 1].count()
 
+
 #Germany
 gt = data.Geography[data.Geography == 'Germany'].count()
 gl = data.Geography[data.Geography == 'Germany'][data.Exited == 1].count()
@@ -31,9 +32,9 @@ data['Age'].var()
 
 #################
 #dataViz
-import matplotlib.pyplot as pyplot
+import matplotlib.pyplot as plt
 
-x = numpy.arange(10,20,0,1)
+x = numpy.arange(10,20,1)
 y = numpy.sin(x)*4+10
 z = 2*x+0.5*y
 
@@ -55,3 +56,5 @@ l = [fl,sl,gl]
 plt.figure(figsize = (12,8))
 plt.pie(t,labels=countries)
 plt.show()
+
+
