@@ -41,5 +41,15 @@ alg = LinearRegression()
 # Train the algorithm
 alg.fit(xData, yData)
 
+alg.coef_
+
+alg.intercept_
+
 # Make prediction
 alg.predict(numpy.array([31,150]).reshape(1,2))
+
+plt.scatter(data["Launch temperature (degrees F)"], data["Number experiencing thermal distress"])
+
+plt.scatter(data["Leak-check pressure (psi)"], data["Number experiencing thermal distress"])
+
+data.columns
