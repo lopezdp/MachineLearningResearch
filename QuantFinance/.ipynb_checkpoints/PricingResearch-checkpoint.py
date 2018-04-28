@@ -2,6 +2,7 @@ import quandl as ql
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pytrends.request import TrendReq
 
 # Configure quandl API Key
 # & Authenticate
@@ -151,7 +152,33 @@ frames = [price, diff, mwntd, mwnus, mwtrv, avbls, blchs,
 btcData = pd.concat(frames, axis=1) 
 btcData
 
+# Create a Google Trend Object
+pytrends = TrendReq(hl='en-US', tz=360)
 
+# Declare a var to store the search term
+kw_list = ["bitcoin"]
+
+# Build payload request to get data from Google trends
+pytrends.build_payload(kw_list, cat=0, timeframe='2009-01-03 2018-04-27', geo='', gprop='')
+
+# Get interest over time
+pytrends.interest_over_time()
+
+# Plot the Interest
+pytrends.interest_over_time().plot(figsize=(20,10))
+
+##############################################
+# Create a Google Trend Object
+pytrends1 = TrendReq(hl='en-US', tz=360)
+
+# Declare a var to store the search term
+kw_list = ["bitcoin"]
+
+# Build payload request to get data from Google trends
+pytrends1.build_payload(kw_list, cat=0, timeframe='2009-01-13 2009-01-20', geo='', gprop='')
+
+# Get interest over time
+pytrends1.interest_over_time()
 
 
 
