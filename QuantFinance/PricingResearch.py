@@ -146,8 +146,9 @@ miopm = miopm.rename(columns={"Value": "Mining Operating Margin"})
 frames = [price, diff, mwntd, mwnus, mwtrv, avbls, blchs,
           atrct, hrate, cptrv, etrav, toutv, ntrbl, naddu,
           ntrep, ntrat, ntran, trfee, totbc, mirev, cptra,
-          trvou, etrvu, trfus, mktcp, bcddy, bcddm, bcddw,
-          bcdde, bcddc, tvtvr, netdf, miopm]
+          trvou, etrvu, trfus, mktcp]
+#, bcddy, bcddm, bcddw,
+#          bcdde, bcddc, tvtvr, netdf, miopm]
 
 btcData = pd.concat(frames, axis=1) 
 btcData
