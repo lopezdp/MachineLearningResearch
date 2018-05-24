@@ -1,4 +1,4 @@
-## A Multiple Linear Regression Model Using the Least Square Method to Describe the Market Price of Cryptocurrencies: The Case of Bitcoin.
+## A Machine Learning Model using Tensorflow to Describe the Market Price of Cryptocurrencies: The Case of Bitcoin.
 
 ##### Authors
     * Researcher: David P Lopez
