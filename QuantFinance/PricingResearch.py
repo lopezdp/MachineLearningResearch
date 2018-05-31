@@ -256,6 +256,7 @@ pytrends = TrendReq(hl='en-US', tz=360)
 kw_list = ["bitcoin"]
 
 # Build payload request to get data from Google trends
+# Hitting rate limits
 pytrends.build_payload(kw_list, cat=0, timeframe='2009-01-03 2018-05-28', geo='', gprop='')
 
 # Get interest over time
