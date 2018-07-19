@@ -315,3 +315,7 @@ price1.shape
 
            
 price1 = price1.drop(['Date'], 1)
+
+
+
+
